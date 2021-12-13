@@ -1,0 +1,58 @@
+var x = 0;
+var y = 0;
+var heightS= 1;
+
+
+/*var star = function(x,y,heightS){
+    
+triangle(x + 100*heightS/1,y + 200*heightS/1,x + 200*heightS/1,y + 400*heightS/1,x + 300*heightS/1,y + 200*heightS/1);
+triangle(x + 200*heightS/1,y + 145*heightS/1,x + 115*heightS/1,y + 341*heightS/1,x + 301*heightS/1,y + 340*heightS/1);
+
+};
+*/
+    
+var space = function(x, y , heightS){
+    
+    var star = function(x,y,heightS){
+    
+triangle(x + 100*heightS/1,y + 200*heightS/1,x + 200*heightS/1,y + 400*heightS/1,x + 300*heightS/1,y + 200*heightS/1);
+triangle(x + 200*heightS/1,y + 145*heightS/1,x + 115*heightS/1,y + 341*heightS/1,x + 301*heightS/1,y + 340*heightS/1);
+
+};
+    
+star(x + 48*heightS/1,y + 67*heightS/1,0.1*heightS/1);
+star(x + 144*heightS/1,y + 145*heightS/1,0.1*heightS/1);
+star(x + 37*heightS/1,y + 200*heightS/1,0.1*heightS/1);
+star(x + 140*heightS/1,y + 21*heightS/1,0.1*heightS/1);
+star(x + 294*heightS/1,y + 333*heightS/1,0.1*heightS/1);
+star(x + 103*heightS/1,y + 293*heightS/1,0.1*heightS/1);
+star(x + 222*heightS/1,y + 248*heightS/1,0.1*heightS/1);
+star(x + 178*heightS/1,y + 323*heightS/1,0.1*heightS/1);
+
+
+noFill();
+//asterioid
+arc(x + 466*heightS/1,y + 71*heightS/1,536*heightS/1,353*heightS/1,67,150);
+arc(x + 472*heightS/1,y + 71*heightS/1,518*heightS/1,289*heightS/1,67,148);
+ellipse(x + 232*heightS/1,y + 134*heightS/1,50*heightS/1,50*heightS/1);
+
+fill(255, 255, 255);
+arc(x + 213*heightS/1, y + 115*heightS/1, 20*heightS/1, 20*heightS/1, -28, 120);
+arc(x + 257*heightS/1, y + 120*heightS/1, 20*heightS/1, 20*heightS/1, 91, 205);
+ellipse(x + 233*heightS/1,y + 142*heightS/1,10*heightS/1,13*heightS/1);
+line(x + 232*heightS/1,y + 160*heightS/1,x + 369*heightS/1,y + 291*heightS/1);
+line(x + 255*heightS/1,y + 147*heightS/1,x + 373*heightS/1,y + 191*heightS/1);
+noFill();
+
+//moon
+ellipse(x + 375*heightS/1,y + 67*heightS/1,209*heightS/1,200*heightS/1);
+
+//rocket
+rect(x + 95*heightS/1,y + 112*heightS/1,22*heightS/1,161*heightS/1);
+triangle(x + 95*heightS/1,y + 113*heightS/1,x + 106*heightS/1,y + 47*heightS/1,x + 118*heightS/1,y + 113*heightS/1);
+triangle(x + 143*heightS/1,y + 273*heightS/1,x + 118*heightS/1,y + 273*heightS/1,x + 118*heightS/1 ,y + 186*heightS/1);
+
+triangle(x + 70*heightS/1,y + 273*heightS/1,x + 95*heightS/1,y + 185*heightS/1,x + 95*heightS/1,y + 273*heightS/1);
+};
+
+space(-26,-5,1);
