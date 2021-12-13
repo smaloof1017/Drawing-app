@@ -1,0 +1,44 @@
+var x  = 0; 
+var y = 0;
+var bheight= 1;
+
+var baby= function(x,y,bheight){
+
+//head
+ellipse(x + 189*bheight/1,y + 168*bheight/1,213*bheight/1,278*bheight/1);
+//eyes
+ellipse(x + 153*bheight/1,y + 106*bheight/1,35*bheight/1,23*bheight/1);
+ellipse(x + 224*bheight/1,y + 106*bheight/1,35*bheight/1,23*bheight/1);
+//pupils
+ellipse(x + 153*bheight/1,y + 106*bheight/1,18*bheight/1,20*bheight/1);
+ellipse(x + 224*bheight/1,y + 106*bheight/1,18*bheight/1,20*bheight/1);
+fill(0, 0, 0);
+ellipse(x + 224*bheight/1,y + 106*bheight/1,5*bheight/1,9*bheight/1);
+ellipse(x + 153*bheight/1,y + 106*bheight/1,5*bheight/1,9*bheight/1);
+noFill();
+fill(255, 255, 255);
+
+//smile
+arc(x + 190*bheight/1,y + 193*bheight/1,131*bheight/1,97*bheight/1,-21,163);
+line(x + 251*bheight/1,y + 175*bheight/1,x + 126*bheight/1,y + 207*bheight/1);
+
+//bowtie
+quad(x + 57*bheight/1,y + 32*bheight/1,x + 89*bheight/1,y + 97*bheight/1,x + 168*bheight/1,y + 4*bheight/1,x + 181*bheight/1,y + 75*bheight/1);
+
+//teeth
+line(x + 189*bheight/1,y + 191*bheight/1,x + 196*bheight/1,y + 212*bheight/1);
+line(x + 172*bheight/1,y + 195*bheight/1,x + 179*bheight/1,y + 217*bheight/1);
+line(x + 196*bheight/1,y + 212*bheight/1,x + 178*bheight/1,y + 217*bheight/1);
+
+//nose
+fill(255, 255, 255);
+bezier(x + 195*bheight/1,y +  171*bheight/1, x + 349*bheight/1, y + 194*bheight/1, x + 458*bheight/1, y + 130*bheight/1, x + 196*bheight/1, y + 147*bheight/1);
+
+//hair
+noFill();
+arc(x + 243*bheight/1,y +  31*bheight/1, 43*bheight/1, 35*bheight/1, -196, -25);
+arc(x + 277*bheight/1,y +  23*bheight/1, 28*bheight/1, 32*bheight/1, -372, -181);
+};
+
+
+baby(0,12,0.9);
