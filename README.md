@@ -1,4 +1,5 @@
-# Drawing-app
+var currentScence = 0;
+var currentColor = null;
 //draws bitmoji
 var drawHead = function(bitmojiX,bitmojiY,bitmojiHeight){
     
@@ -127,10 +128,229 @@ var drawBitmojiHead = function(x,y,emojiHeight){
        var drawBitmoji;
     };
 
+    
+//Khan Button code
+var Button = function(config) {
+    this.x = config.x || 0;
+    this.y = config.y || 0;
+    this.width = config.width || 150;
+    this.height = config.height || 50;
+    this.label = config.label || "Click";
+    this.onClick = config.onClick || function() {};
+};
+
+Button.prototype.draw = function() {
+    fill(255, 255, 255);
+    rect(this.x+35, this.y, this.width, this.height, 5);
+    fill(0, 0, 0);
+    textSize(19);
+    textAlign(LEFT, TOP);
+    text(this.label, this.x+46, this.y+this.height/4);
+};
+
+Button.prototype.isMouseInside = function() {
+    return mouseX > this.x &&
+           mouseX < (this.x + this.width) &&
+           mouseY > this.y &&
+           mouseY < (this.y + this.height);
+};
+
+Button.prototype.handleMouseClick = function() {
+    if (this.isMouseInside()) {
+        this.onClick();
+    }
+};
+
+// button to draw with blue color 
+var colorButton1 = new Button({
+    x: 271,
+    y: 10,
+    width: 85,
+    label: "Blue" ,
+    onClick: function() {
+        currentColor =color(0,0,255) ;
+    }           
+});
+// button to draws with red color
+var colorButton2 = new Button({
+    x: 272,
+    y: 62,
+    width: 83,
+    label: "Red" ,
+    onClick: function() {
+        currentColor =color(255,0,0) ;
+    }           
+});
+//button to draws with yellow color 
+var colorButton3 = new Button({
+    x: 270,
+    y: 115,
+    width: 85,
+    label: "Yellow" ,
+    onClick: function() {
+        currentColor =color(255,255,0) ;
+    }           
+});
+// button to draw with green color
+var colorButton4 = new Button({
+    x: 270,
+    y: 168,
+    width: 90,
+    label: "Green" ,
+    onClick: function() {
+        currentColor = color(39, 207, 50) ;
+    }           
+});
+var colorButton5 = new Button({
+    x: 270,
+    y: 224,
+    width: 90,
+    label: "Orange" ,
+    onClick: function() {
+        currentColor = color(237, 114, 26) ;
+    }           
+});
+var colorButton6 = new Button({
+    x: 270,
+    y: 279,
+    width: 90,
+    label: "Purple" ,
+    onClick: function() {
+        currentColor = color(150, 65, 235) ;
+    }           
+});
+var colorButton7 = new Button({
+    x: -30,
+    y: 270,
+    width: 80,
+    label: "Black" ,
+    onClick: function() {
+        currentColor = color(0, 0, 0) ;
+    }           
+});
+var colorButton8 = new Button({
+    x: 169,
+    y: 272,
+    width: 80,
+    label: "White" ,
+    onClick: function() {
+        currentColor = color(255, 255, 255) ;
+    } 
+});
+var colorButton9 = new Button({
+    x: 62,
+    y:272,
+    width: 90,
+    label: "Random" ,
+    onClick: function() {
+        currentColor = color(158, 55, 158) ;
+    } 
+});
+var nextButton = new Button ({
+    x: 100,
+    y: 330,
+    width:122,
+    label: "Next Secene",
+    onClick: function() {
+     currentScence = currentScence + 1;
+     loop();
+    }
+});
+//first trace game screen
+var fristScence = function(){
+    currentScence = 1;
+    background(153, 222, 213);
+    colorButton1.draw();
+    colorButton2.draw();
+    colorButton3.draw();
+    colorButton4.draw();
+    colorButton5.draw();
+    colorButton6.draw();
+    colorButton7.draw();
+    colorButton8.draw();
+    colorButton9.draw();
+    nextButton.draw();
+    fill(255, 255, 255);
+    rect(1,5,280,257);
+};
+//draw 2nd game scence
+var secondScence = function(){
+    currentScence = 2;
+    background(224, 47, 224);
+    colorButton1.draw();
+    colorButton2.draw();
+    colorButton3.draw();
+    colorButton4.draw();
+    colorButton5.draw();
+    colorButton6.draw();
+    colorButton7.draw();
+    colorButton8.draw();
+    colorButton9.draw();
+    nextButton.draw();
+    fill(255, 255, 255);
+    rect(1,5,280,257);
+};
+//draw 3rd game scence
+var thridScence = function(){
+    currentScence = 3;
+    background(224, 47, 109);
+    colorButton1.draw();
+    colorButton2.draw();
+    colorButton3.draw();
+    colorButton4.draw();
+    colorButton5.draw();
+    colorButton6.draw();
+    colorButton7.draw();
+    colorButton8.draw();
+    colorButton9.draw();
+    nextButton.draw();
+    fill(255, 255, 255);
+    rect(1,5,280,257);
+};
+//draw 4th game scence
+var fourthScence = function(){
+    currentScence = 4;
+    background(34, 105, 204);
+    colorButton1.draw();
+    colorButton2.draw();
+    colorButton3.draw();
+    colorButton4.draw();
+    colorButton5.draw();
+    colorButton6.draw();
+    colorButton7.draw();
+    colorButton8.draw();
+    colorButton9.draw();
+    nextButton.draw();
+    fill(255, 255, 255);
+    rect(1,5,280,257);
+};
+//draws 5th game scence
+var fifthScence = function(){
+    currentScence = 5;
+    background(45, 214, 82);
+    colorButton1.draw();
+    colorButton2.draw();
+    colorButton3.draw();
+    colorButton4.draw();
+    colorButton5.draw();
+    colorButton6.draw();
+    colorButton7.draw();
+    colorButton8.draw();
+    colorButton9.draw();
+    nextButton.draw();
+    fill(255, 255, 255);
+    rect(1,5,280,257);
+};
+//end scene 
+var endScence= function(){
+    currentScence = 6;
+    background(164, 206, 245);
+    textSize(30);
+    text('The End',133,136);
 };//start button 
 var startButton = new Button({
-    x: 97,
-    y: 300,
+    x: 100,
+    y: 270,
     width: 100,
     label: "    Start" ,
     onClick: function() {
@@ -147,6 +367,8 @@ var startButton = new Button({
     text("Andrew Marquez", 75,162);
     text("Steven Maloof",83,197);
     startButton.draw();
+    drawBitmoji(-16,182,0.35);
+    drawBitmoji2(317,243,103);
  
 };
 
@@ -155,15 +377,54 @@ var draw= function() {
     if(currentScence ===0){
         startScence();
     }
-
-    else if (currentScence === 3){
+   else if(currentScence === 1)
+   {
+}
+   else if(currentScence === 2)
+   {
+      secondScence(); 
+      noLoop();
+   }
+   else if(currentScence === 3)
+   {  
+       thridScence();
+        noLoop();
+   }
+   else if(currentScence === 4)
+   { 
+       fourthScence();
+        noLoop();
+   }
+   else if(currentScence === 5)
+   { 
+       fifthScence();
+           noLoop();
+    }
+    else if (currentScence === 6){
         endScence();
+              noLoop();
     }
-     if (mouseIsPressed)
-    {
-       fill(currentColor);
-       noStroke()
-       ellipse(mouseX,mouseY,20,20);
-    }
+
    
-}; 
+};
+
+mouseDragged = function(){
+       fill(currentColor);
+       noStroke();
+       ellipse(mouseX,mouseY,20,20);
+};
+
+// mouseClick function
+mouseClicked = function() {
+    startButton.handleMouseClick();
+    colorButton1.handleMouseClick();
+    colorButton2.handleMouseClick();
+    colorButton3.handleMouseClick();
+    colorButton4.handleMouseClick();
+    colorButton5.handleMouseClick();
+    colorButton6.handleMouseClick();
+    colorButton7.handleMouseClick();
+    colorButton8.handleMouseClick();
+    colorButton9.handleMouseClick();
+    nextButton.handleMouseClick();
+};
